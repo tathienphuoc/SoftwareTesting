@@ -18,6 +18,7 @@ public class SignUp extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra màu nền trang web.
     @Test
     public void testBackground() {
         WebElement background = driver.findElement(By.xpath("//div[@class='container-fluid d-flex']"));
@@ -26,6 +27,7 @@ public class SignUp extends TestCSS {
         testBackgroundColor(background, expect_background_color_background);
     }
 
+    //Kiểm tra form đăng nhập.
     @Test
     public void testSignUpForm() {
         //test kích thước nút trang chủ

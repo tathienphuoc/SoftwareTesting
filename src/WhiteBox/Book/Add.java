@@ -26,6 +26,7 @@ public class Add extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra nút thêm sách.
     @Test
     public void testAddButton() {
         WebElement add_button = getWebElementByCSSSelector(driver, "li.nav-item:nth-child(2) > a:nth-child(1)");
@@ -42,6 +43,7 @@ public class Add extends TestCSS {
 //        driver.close();
     }
 
+    //Kiểm tra form thêm sách.
     @Test
     public void testAddForm() {
         WebElement add_button = getWebElementByCSSSelector(driver, "li.nav-item:nth-child(2) > a:nth-child(1)");

@@ -26,6 +26,7 @@ public class Edit extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra nút chỉnh sửa.
     @Test
     public void testEditButton() {
         WebElement edit_button = getWebElementByCSSSelector(driver, "div.card:nth-child(1) > div:nth-child(6) > a:nth-child(1)");
@@ -42,6 +43,7 @@ public class Edit extends TestCSS {
 //        driver.close();
     }
 
+    //Kiểm tra form chỉnh sửa.
     @Test
     public void testEditForm() {
         WebElement edit_button = getWebElementByCSSSelector(driver, "div.card:nth-child(1) > div:nth-child(6) > a:nth-child(1)");

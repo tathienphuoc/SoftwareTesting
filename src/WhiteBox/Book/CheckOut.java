@@ -30,6 +30,7 @@ public class CheckOut extends TestCSS {
         testPaymentForm();
     }
 
+    //Kiểm tra giỏ hàng.
     @Test
     public void testProductTable() {
 
@@ -86,6 +87,7 @@ public class CheckOut extends TestCSS {
         }
     }
 
+    //Kiểm tra form thanh toán.
     @Test
     public void testPaymentForm() {
         // Kiểm trả chiều dài và rộng của div container

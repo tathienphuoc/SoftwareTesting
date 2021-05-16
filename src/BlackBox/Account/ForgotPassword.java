@@ -21,6 +21,8 @@ public class ForgotPassword extends TestFunction {
         driver.close();
     }
 
+
+    //Trường hợp tên tài khoản để trống.
     @Test
     public void testBlankUserName() {
         driver.navigate().refresh();
@@ -39,6 +41,7 @@ public class ForgotPassword extends TestFunction {
         testText(user_name_validation_message, expect_user_name_validation_message);
     }
 
+    //Trường hợp mật khẩu để trống.
     @Test
     public void testBlankPassword() {
         driver.navigate().refresh();
@@ -57,6 +60,7 @@ public class ForgotPassword extends TestFunction {
         testText(password_validation_message, expect_password_validation_message);
     }
 
+    //Trường hợp nhập lại mật khẩu để trống.
     @Test
     public void testBlankConfirmPassword() {
         driver.navigate().refresh();
@@ -75,6 +79,7 @@ public class ForgotPassword extends TestFunction {
         testText(confirm_password_validation_message, expect_confirm_password_validation_message);
     }
 
+    //Trường hợp tên tài khoản không tồn tại.
     @Test
     public void testNotExistUserName() {
         driver.navigate().refresh();
@@ -97,6 +102,7 @@ public class ForgotPassword extends TestFunction {
         testText(already_exist_user_name_validation_message, expect_already_exist_user_name_validation_message);
     }
 
+    //Trường hợp mật khẩu và mật khẩu nhập lại không khớp.
     @Test
     public void testUnMatchPassword() {
         driver.navigate().refresh();
@@ -117,6 +123,7 @@ public class ForgotPassword extends TestFunction {
         testText(unmatch_password_validation_message, expect_unmatch_password_validation_message);
     }
 
+    //Trường hợp mật khẩu không thỏa các quy định về mật khẩu.
     @Test
     public void testInvalidPassword() {
         driver.navigate().refresh();
@@ -139,6 +146,7 @@ public class ForgotPassword extends TestFunction {
         testText(invalid_password_validation_message, expect_invalid_password_validation_message);
     }
 
+    //Trường hợp đặt lại mật khẩu thành công.
     @Test
     public void testSuccessForgotPassword() {
         driver.navigate().refresh();

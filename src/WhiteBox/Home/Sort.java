@@ -16,6 +16,7 @@ public class Sort extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra nút sắp xếp.
     @Test
     public void testSortButton()  {
         WebElement sort_button = getWebElementByXPath(driver, "//button[@class='form-control mr-sm-2']");

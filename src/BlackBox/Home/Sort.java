@@ -16,6 +16,7 @@ public class Sort extends TestFunction {
         driver.close();
     }
 
+    //Trường hợp sắp xếp theo giá.
     @Test
     public void testSortByPrice(){
         navigateTo(driver,Config.BaseURL+ "/Book_Controller/books");
@@ -28,7 +29,7 @@ public class Sort extends TestFunction {
 
     }
 
-    //Sắp xếp theo tên
+    //Trường hợp sắp xếp theo tên.
     @Test
     public void testSortByTitle(){
         navigateTo(driver,Config.BaseURL+ "/Book_Controller/books");

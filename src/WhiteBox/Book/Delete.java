@@ -24,6 +24,7 @@ public class Delete extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra nút xóa sách.
     @Test
     public void testDeleteButton() throws InterruptedException {
         WebElement delete_button = getWebElementByCSSSelector(driver, "div.card:nth-child(1) > div:nth-child(6) > a:nth-child(2)");

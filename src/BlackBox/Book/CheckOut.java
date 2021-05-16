@@ -38,6 +38,7 @@ public class CheckOut extends TestFunction {
         driver.close();
     }
 
+    //Trường hợp thêm sách vào giỏ hàng.
     @Test
     public void testAddBookToShoppingCart() {
         BookToTest = createBookToTest(driver);
@@ -64,6 +65,7 @@ public class CheckOut extends TestFunction {
         testExistText(driver, BookToTest.get("title"));
     }
 
+    //Trường hợp xóa sách đã có trong giỏ hàng.
     @Test
     public void testDeleteBookInShoppingCart() {
         testAddBookToShoppingCart();
@@ -84,6 +86,7 @@ public class CheckOut extends TestFunction {
         }
     }
 
+    //Trường hợp thông tin thanh toán để trống.
     @Test
     public void testBlankPaymentForm() {
 
@@ -101,43 +104,33 @@ public class CheckOut extends TestFunction {
         payment_button.click();
 
         //Kiểm tra input Tên chủ tài khoản
-//        WebElement card_onwer_input = getWebElementByXPath(driver, "//*[@id=\"cardOwner\"]");
         WebElement card_onwer_error = getWebElementById(driver, "errCardOwner");
         String expect_text_card_onwer_error = "Vui lòng nhập tên chủ thẻ.";
         testText(card_onwer_error, expect_text_card_onwer_error);
 
         //Kiểm tra input Số tài khoản
-//        WebElement card_number_input = getWebElementByXPath(driver, "//*[@id=\"cardNumber\"]");
         WebElement card_number_error = getWebElementById(driver, "errCardNumber");
         String expect_text_card_number_error = "Vui lòng nhập số tài khoản.";
         testText(card_number_error, expect_text_card_number_error);
 
         //Kiểm tra input Địa chỉ giao hàng
-//        WebElement address_input = getWebElementByXPath(driver, "//*[@id=\"address\"]");
         WebElement address_error = getWebElementById(driver, "errAddress");
         String expect_text_address_error = "Vui lòng nhập địa chỉ giao hàng.";
         testText(address_error, expect_text_address_error);
 
 
         //Kiểm tra input Thành phố
-//        WebElement city_input = getWebElementByXPath(driver, "//*[@id=\"city\"]");
         WebElement city_error = getWebElementById(driver, "errCity");
         String expect_text_city_error = "Vui lòng nhập tên thành phố.";
         testText(city_error, expect_text_city_error);
 
-
-        //Kiểm tra input Số điện thoại liên lạc
-//        WebElement phone_number_input = getWebElementByXPath(driver, "//*[@id=\"phoneNumber\"]");
         WebElement phone_number_error = getWebElementById(driver, "errPhone");
         String expect_text_phone_number_error = "Vui lòng nhập số điện thoại gồm ít nhất 10 số.";
         testText(phone_number_error, expect_text_phone_number_error);
 
-        // Kiểm trả button thanh toán
-//        WebElement checkout_button = getWebElementById(driver, "btnSubmit");
-//        WebElement checkout_error = getWebElementById(driver, "btnSubmit");
-
     }
 
+    //Trường hợp thanh toán thành công.
     @Test
     public void testSuccessPaymentForm() {
 
@@ -187,6 +180,7 @@ public class CheckOut extends TestFunction {
         testText(success, expect_success_text);
     }
 
+    //Trường hợp tên chủ thẻ chứa số.
     @Test
     public void testCardOwnerContainerNumber() {
 
@@ -237,6 +231,7 @@ public class CheckOut extends TestFunction {
         testText(card_onwer_error, expect_text_card_onwer_error);
     }
 
+    //Trường hợp tên chủ thẻ không viết đúng theo định dạng tiêu đề (Title Case).
     @Test
     public void testCardOwnerNotTitleCase() {
 
@@ -287,6 +282,7 @@ public class CheckOut extends TestFunction {
         testText(card_onwer_error, expect_text_card_onwer_error);
     }
 
+    //Trường hợp số thẻ không hợp lệ.
     @Test
     public void testInvalidCardNumber() {
 

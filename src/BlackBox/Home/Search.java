@@ -16,6 +16,7 @@ public class Search extends TestFunction {
         driver.close();
     }
 
+    //Trường hợp không tìm thấy kết quả.
     @Test
     public void testFailSearch(){
         navigateTo(driver,Config.BaseURL+ "/Book_Controller/books");
@@ -29,6 +30,7 @@ public class Search extends TestFunction {
         testText(result,expect_text_result);
     }
 
+    //Trường hợp tìm thấy kết quả.
     @Test
     public void testSuccessSearch(){
         navigateTo(driver,Config.BaseURL+ "/Book_Controller/books");

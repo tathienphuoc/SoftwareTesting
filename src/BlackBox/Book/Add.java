@@ -28,6 +28,7 @@ public class Add extends TestFunction {
         driver.close();
     }
 
+    //Trường hợp tiêu đề sách để trống.
     @Test
     public void testBlankTitle() {
         driver.navigate().refresh();
@@ -39,6 +40,7 @@ public class Add extends TestFunction {
         testStringEquals(title_validation_message, expect_title_validation_message);
     }
 
+    //Trường hợp giá sách để trống.
     @Test
     public void testBlankPrice() {
         driver.navigate().refresh();
@@ -52,6 +54,7 @@ public class Add extends TestFunction {
         testStringEquals(price_validation_message, expect_price_validation_message);
     }
 
+    //Trường hợp giá sách không là số > 0.
     @Test
     public void testNonPositivePrice() {
         driver.navigate().refresh();
@@ -67,6 +70,7 @@ public class Add extends TestFunction {
         testStringEquals(price_validation_message, expect_price_validation_message);
     }
 
+    //Trường hợp năm xuất bản sách để trống.
     @Test
     public void testBlankPublishYear() {
         driver.navigate().refresh();
@@ -82,6 +86,7 @@ public class Add extends TestFunction {
         testStringEquals(price_validation_message, expect_price_validation_message);
     }
 
+    //Trường hợp năm xuất bản sách không là số > 1000.
     @Test
     public void testNonPositivePublishYear() {
         driver.navigate().refresh();
@@ -99,6 +104,7 @@ public class Add extends TestFunction {
         testStringEquals(price_validation_message, expect_price_validation_message);
     }
 
+    //Trường hợp tạo sách thành công.
     @Test
     public void testAddBook() {
         driver.navigate().refresh();

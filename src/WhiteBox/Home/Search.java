@@ -17,6 +17,7 @@ public class Search extends TestCSS {
         driver.close();
     }
 
+    //Kiểm tra nút tìm kiếm theo tiêu đề sách.
     @Test
     public void testSearchButton() {
         WebElement search_button = getWebElementByXPath(driver, "/html/body/nav[1]/div/form/button");
@@ -33,6 +34,7 @@ public class Search extends TestCSS {
 //        driver.close();
     }
 
+    //Kiểm tra ô tìm kiếm theo tiêu đề sách.
     @Test
     public void testSearchInput() {
         WebElement search_input = getWebElementByXPath(driver, "/html/body/nav[1]/div/form/input");

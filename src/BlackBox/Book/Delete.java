@@ -29,6 +29,7 @@ public class Delete extends TestFunction {
         testAcceptDeleteBookInCart();
     }
 
+    //Trường hợp hủy xác nhận xóa sách.
     @Test
     public void testCancelDeleteBook() {
         BookToTest = createBookToTest(driver);
@@ -43,6 +44,7 @@ public class Delete extends TestFunction {
         testText(title, BookToTest.get("title"));
     }
 
+    //Trường hợp đồng ý xác nhận xóa sách.
     @Test
     public void testAcceptDeleteBook() {
         BookToTest = createBookToTest(driver);
@@ -58,6 +60,7 @@ public class Delete extends TestFunction {
         testTextNotEquals(title, BookToTest.get("title"));
     }
 
+    //Trường hợp xóa sách thất bại.
     @Test
     public void testAcceptDeleteBookInCart() {
         buyBookToTest(driver);

@@ -19,6 +19,7 @@ public class Login extends TestFunction {
         driver.close();
     }
 
+    //Trường hợp tên tài khoản để trống.
     @Test
     public void testBlankUserName() {
         driver.navigate().refresh();
@@ -33,6 +34,7 @@ public class Login extends TestFunction {
         testText(password_validation_message, expect_password_validation_message);
     }
 
+    //Trường hợp mật khẩu để trống.
     @Test
     public void testBlankPassword() {
         driver.navigate().refresh();
@@ -47,6 +49,7 @@ public class Login extends TestFunction {
         testText(user_name_validation_message, expect_user_name_validation_message);
     }
 
+    //Trường hợp đăng nhập thất bại( tài khoản không tồn tại, tên tài khoản hoặc mật khấu không đúng).
     @Test
     public void testFailLogin() {
         driver.navigate().refresh();
@@ -64,6 +67,7 @@ public class Login extends TestFunction {
         testText(fail_login_validation_message, expect_fail_login_validation_message);
     }
 
+    //Trường hợp đăng nhập tài khoản thành công.
     @Test
     public void testSuccessLogin() {
         driver.navigate().refresh();

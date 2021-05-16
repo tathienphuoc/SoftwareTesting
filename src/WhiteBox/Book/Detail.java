@@ -24,6 +24,7 @@ public class Detail extends TestCSS {
         testDetail();
     }
 
+    //Kiểm tra trang chi tiết sách.
     @Test
     public void testDetail() {
         //kt màu title
